@@ -14,7 +14,7 @@ const urlPage = "https://roomble.com/ideas/soveti-i-idei/";
 parseLinks(urlPage, elems.roomble.link)
   .then(links => {
     getPosts(links, elems.roomble).then(posts => {
-      axios(`http://192.168.1.13:3000/posts`, {
+      axios(`http://localhost:3000/posts`, {
         method: "POST",
         data: JSON.stringify(posts),
         headers: {
