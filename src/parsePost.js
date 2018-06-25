@@ -23,12 +23,6 @@ function parsePost(url, elems) {
 
       const $ = cheerio.load(body.data, { decodeEntities: false });
 
-      // $.prototype.logHtml = function() {
-      //   console.log(this.html());
-      // };
-
-      // $('body').logHtml();
-
       const image = $(elems.image).attr("src");
       const pubDate = $(elems.pubDate).text();
       const title = $(elems.title)
@@ -87,18 +81,6 @@ function parsePost(url, elems) {
             id: formatDate(pubDate, "x")
           })
         : console.log("not today's news...");
-
-      // post = {
-      //   pubDate: getDate,
-      //   title: title,
-      //   image: image,
-      //   description: description,
-      //   content: content.toString(),
-      //   link: link,
-      //   count: 9,
-      //   logo: logo,
-      //   id: formatDate(pubDate, "x")
-      // };
 
       if (post) {
         console.log(post);
