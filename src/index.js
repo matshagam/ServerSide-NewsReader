@@ -25,5 +25,3 @@ parseLinks(urlPage, elems.roomble.link)
     });
   })
   .catch(e => console.log(e));
-
-// To start server run terminal: json-server --host "192.168.1.13" --port 3000 --watch db.json
